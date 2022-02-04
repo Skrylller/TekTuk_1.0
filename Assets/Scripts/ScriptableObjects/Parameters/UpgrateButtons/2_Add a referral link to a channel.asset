@@ -16,8 +16,9 @@ MonoBehaviour:
   _needPurchases: []
   _NeedSubscribers: 1000
   _NeedLoyalty: 0.9
-  _LoyaltyCoefficient: 0.6
+  _LoyaltyCoefficient: 0.4
   _GetMoney: 0
   _GetSubscribers: 0
   isUnlock: 1
-  _GetPassiveIncome: 5
+  _GetPassiveIncome: 1
+  _GetFixLoyalty: 0

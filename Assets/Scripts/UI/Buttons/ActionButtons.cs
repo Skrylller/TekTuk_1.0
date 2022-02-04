@@ -30,7 +30,7 @@ public abstract class ActionButtons : Buttons
     {
         foreach (ActionButtonObject.NeedPurchase conditions in buttonObject.NeedPurchases)
         {
-            if (PurchasableObjectPull.main.FindPurchasableObject(conditions._NeedPurchase).Level <= 0)
+            if (PurchasableObjectPull.main.FindPurchasableObject(conditions._NeedPurchase).Level < conditions._NeedPurchasesLevel)
             {
                 buttonObject.isUnlock = false;
                 SetText();
@@ -44,7 +44,7 @@ public abstract class ActionButtons : Buttons
 
     protected bool ChekcStatConditions()
     {
-        if (buttonObject.NeedLoyalty * 100 > Stats.main.LoyaltyStat.ReturnValue() || buttonObject.NeedSubscribers > Stats.main.SubscribersStat.ReturnValue() || -buttonObject.GetMoney > Stats.main.SubscribersStat.ReturnValue())
+        if (buttonObject.NeedLoyalty * 100 > Stats.main.LoyaltyStat.ReturnValue() || buttonObject.NeedSubscribers > Stats.main.SubscribersStat.ReturnValue() || -buttonObject.GetMoney > Stats.main.MoneyStat.ReturnValue())
         {
             Message.TextMessage($"You are missing something");
             return false;

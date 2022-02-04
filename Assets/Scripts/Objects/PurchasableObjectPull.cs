@@ -10,8 +10,8 @@ public class PurchasableObjectPull : MonoBehaviour
     [System.Serializable]
     private class PurchasableObjectOnScene
     {
-        public string _nameObject;
-        public PurchasableObject _purchasableObject;
+        public string nameObject;
+        public PurchasableObject purchasableObject;
     }
 
     [SerializeField] private List<PurchasableObjectOnScene> _purchasableObjectsList = new List<PurchasableObjectOnScene>();
@@ -23,13 +23,13 @@ public class PurchasableObjectPull : MonoBehaviour
 
     public PurchasableObject FindPurchasableObject(string name)
     {
-        var purchasableObject = _purchasableObjectsList.Where(x => x._nameObject == name).ToList();
+        var purchasableObject = _purchasableObjectsList.Where(x => x.nameObject == name).ToList();
         if (purchasableObject.Count > 0)
         {
             if (purchasableObject.Count > 1)
                 Debug.Log($"Find more {name} purchasable object Count:{purchasableObject.Count}");
 
-            return purchasableObject[0]._purchasableObject;
+            return purchasableObject[0].purchasableObject;
         }
         else
         {

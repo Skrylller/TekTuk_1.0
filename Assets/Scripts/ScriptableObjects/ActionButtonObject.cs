@@ -8,6 +8,7 @@ public class ActionButtonObject : ButtonObject
     public class NeedPurchase
     {
         public string _NeedPurchase;
+        public int _NeedPurchasesLevel;
     }
 
     [Header("Action")]

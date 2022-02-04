@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: 3_Tell an old joke
   m_EditorClassIdentifier: 
   _name: Tell an old joke
-  _needPurchases: []
+  _needPurchases:
+  - _NeedPurchase: Phones
+    _NeedPurchasesLevel: 1
   _NeedSubscribers: 150
   _NeedLoyalty: 0
   _LoyaltyCoefficient: 0.7
   _GetMoney: 0
   _GetSubscribers: 0
-  isUnlock: 0
+  isUnlock: 1
   _viwesPotential: 750
   _viwesPotentialCoefficient: 0.4
   _newSubscribersCoefficient: 0.15

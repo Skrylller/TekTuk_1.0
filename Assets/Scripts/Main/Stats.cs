@@ -124,7 +124,7 @@ public class Stats : MonoBehaviour
     public void NewUpdate(UpgradeButton upgrade)
     {
         PassiveIncome.PlusValue(upgrade.upgradeButtonsObject.GetPassiveIncome);
-
+        LoyaltyStat.PlusValue(upgrade.upgradeButtonsObject.GetFixLoyalty);
         Action(upgrade);
     }
 

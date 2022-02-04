@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 1_Copy someone else's video
   m_EditorClassIdentifier: 
   _name: Copy someone else's video
-  _needPurchases: []
-  _NeedSubscribers: 0
+  _needPurchases:
+  - _NeedPurchase: Phones
+    _NeedPurchasesLevel: 1
+  _NeedSubscribers: 5
   _NeedLoyalty: 0
   _LoyaltyCoefficient: 0.5
   _GetMoney: 0

@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: 4_conversational video with poor quality
   m_EditorClassIdentifier: 
   _name: "\u0421onversational video with poor quality"
-  _needPurchases: []
+  _needPurchases:
+  - _NeedPurchase: Phones
+    _NeedPurchasesLevel: 1
   _NeedSubscribers: 500
   _NeedLoyalty: 0.8
   _LoyaltyCoefficient: 1.2

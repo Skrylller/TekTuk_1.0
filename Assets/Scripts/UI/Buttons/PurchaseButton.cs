@@ -48,7 +48,7 @@ public class PurchaseButton : Buttons
 
     public override void SetText()
     {
-        _ButtonText.text = Translator.TranslateText($"{purchaseButton.Name} Level:{_purchasbnleObject.Level + 1}");
+        _ButtonText.text = Translator.TranslateText(purchaseButton.VisualName[_purchasbnleObject.Level]);
         string aditionalText;
         aditionalText = $"Need {purchaseButton.Costs[_purchasbnleObject.Level]} money. ";
         _ButtonAdditionalText.text = Translator.TranslateText(aditionalText);
@@ -56,7 +56,7 @@ public class PurchaseButton : Buttons
 
     public void SetMaxLevelText()
     {
-        _ButtonText.text = Translator.TranslateText($"Level:{_purchasbnleObject.Level} Max");
+        _ButtonText.text = Translator.TranslateText($"You have all upgrades");
         _ButtonAdditionalText.text = Translator.TranslateText("");
     }
 

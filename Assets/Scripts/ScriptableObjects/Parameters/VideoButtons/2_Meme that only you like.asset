@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: 2_Meme that only you like
   m_EditorClassIdentifier: 
   _name: Meme that only you like
-  _needPurchases: []
+  _needPurchases:
+  - _NeedPurchase: Phones
+    _NeedPurchasesLevel: 1
   _NeedSubscribers: 100
   _NeedLoyalty: 0
   _LoyaltyCoefficient: 1.1
   _GetMoney: 0
   _GetSubscribers: 0
-  isUnlock: 0
+  isUnlock: 1
   _viwesPotential: 500
   _viwesPotentialCoefficient: 0.5
   _newSubscribersCoefficient: 0.1

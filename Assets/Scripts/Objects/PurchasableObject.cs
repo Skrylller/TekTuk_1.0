@@ -5,14 +5,10 @@ using UnityEngine.UI;
 
 public class PurchasableObject : MonoBehaviour
 {
-    private Image _objectImage;
-    [SerializeField] private Image[] _objectImageLevels;
+    [SerializeField] private GameObject[] _objectLevels;
+    [SerializeField] private bool isLevable;
     public int Level { get; private set; }
 
-    private void Awake()
-    {
-        _objectImage = GetComponentInChildren<Image>();
-    }
 
     private void Start()
     {
@@ -21,15 +17,32 @@ public class PurchasableObject : MonoBehaviour
 
     public void ChangeLevelObject(int level)
     {
+        if (isLevable)
+            UpdateLevableObject(level);
+        else
+            ActiveSomeObject(level);
+    }
+
+    private void UpdateLevableObject(int level)
+    {
+        foreach(GameObject obj in _objectLevels)
+            obj.SetActive(false);
+
         Level = level;
         if(level > 0)
         {
-            _objectImage.gameObject.SetActive(true);
-            _objectImage = _objectImageLevels[level - 1];
+            _objectLevels[level - 1].SetActive(true);
         }
-        else
+    }
+    private void ActiveSomeObject(int level)
+    {
+        foreach (GameObject obj in _objectLevels)
+            obj.SetActive(false);
+
+        Level = level;
+        for (int i = 0; i < Level; i++)
         {
-            _objectImage.gameObject.SetActive(false);
+            _objectLevels[i].SetActive(true);
         }
     }
 }
